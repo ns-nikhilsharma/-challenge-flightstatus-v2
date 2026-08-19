@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkyRoute Flight Status</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">SkyRoute Support</p>
+      <h1>Flight Status Tracker</h1>
+      <p>Look up the latest normalized status from AeroTrack and QuickFlight.</p>
+    </section>
+
+    <section class="card">
+      <form id="searchForm">
+        <div class="form-grid">
+          <label>
+            Flight number
+            <input id="flightNumber" name="flightNumber" placeholder="AR101" required maxlength="10">
+          </label>
+
+          <label>
+            Date
+            <input id="date" name="date" type="date" required>
+          </label>
+        </div>
+
+        <button id="searchButton" type="submit">Search status</button>
+      </form>
+    </section>
+
+    <section id="state" class="state empty" aria-live="polite">
+      Enter a flight number and date to search.
+    </section>
+
+    <section id="result" class="card result hidden" aria-live="polite"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
